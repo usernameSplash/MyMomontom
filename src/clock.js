@@ -3,12 +3,13 @@ const clockTitle = clockContainer.querySelector('.js_clock');
 
 function getTime() {
   const date = new Date();
-  let minutes = date.getMinutes();
-  let hours = date.getHours();
 
-  minutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
-  hours = hours < 10 ? `0${hours}` : `${hours}`;
-  clockTitle.innerText = `${hours}:${minutes}`;
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+  clockTitle.innerText = `${hours < 10 ? `0${hours}` : `${hours}`}:${
+    minutes < 10 ? `0${minutes}` : `${minutes}`
+  }:${seconds < 10 ? `0${seconds}` : `${seconds}`}`;
 }
 
 function init() {
