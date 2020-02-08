@@ -1,3 +1,8 @@
+/**
+ * Representing a digital clock.
+ * The format of clock is "Hours:Minutes:Seconds"
+ */
+
 const clockContainer = document.querySelector('.js_clockContainer');
 const clockTitle = clockContainer.querySelector('.js_clock');
 

@@ -1,0 +1,3 @@
+/**
+ * Managing Background Images
+ */

@@ -1,3 +1,8 @@
+/**
+ * Input, Load, and Save the user's name.
+ * Name is stored in Local Storage.
+ */
+
 const form = document.querySelector('.js_form');
 const input = form.querySelector('input');
 const greeting = document.querySelector('.js_greeting');
