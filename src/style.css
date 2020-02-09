@@ -1,6 +1,6 @@
 @font-face {
   font-family: SpoqaHanSans;
-  src: url('Spoqa Han Sans Regular.ttf') format('truetype');
+  src: url('../font/Spoqa\ Han\ Sans\ Regular.ttf') format('truetype');
 }
 body {
   font-family: SpoqaHanSans;
@@ -86,4 +86,21 @@ ul {
 .showing {
   display: block;
   text-align: center;
+}
+
+.weatherContainer {
+  position: fixed;
+  top: 85%;
+  left: 3%;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  background-color: rgba(240, 248, 255, 0.6);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.weatherIcon {
+  display: block;
+  margin: -20px auto -25px auto;
+  width: 50%;
 }
