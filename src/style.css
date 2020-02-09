@@ -1,13 +1,78 @@
-body {
-  /* font */
-  /* align to center */
+ul {
+  list-style-type: none;
+  margin: 10;
+  padding-inline-start: 0px;
+}
+
+span {
+  margin-left: 10px;
+}
+button {
+  border: 0ch;
+  background-color: transparent;
+  padding: 2px;
+}
+
+li {
+  text-align: left;
+  border-radius: 5px 5px 5px 5px;
+  background-color: aliceblue;
+  margin: 2px 0px 2px 0px;
+}
+
+ul {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-position-x: center;
   background-size: cover;
+  position: absolute;
+  display: table;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.layer {
+  margin-top: 15%;
+  /* text-align: center; */
+}
+
+.clockContainer {
+  background-color: aliceblue;
+  width: 350px;
+  border-radius: 10px 10px 10px 10px;
+  margin: 0 auto;
+}
+.clock {
+  text-align: center;
+  font-size: 72px;
 }
 
 .nameForm,
 .greeting {
   display: none;
+  text-align: center;
 }
+
+.greeting {
+  width: max-content;
+  padding: 5px 5px 5px 5px;
+  background-color: aliceblue;
+  border-radius: 5px 5px 5px 5px;
+  margin: 0 auto;
+}
+
+.todoForm {
+  margin: 20px 0px 10px 0px;
+  text-align: center;
+}
+
 .showing {
   display: block;
+  text-align: center;
 }

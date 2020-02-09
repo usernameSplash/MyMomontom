@@ -7,18 +7,22 @@
   </head>
 
   <body>
-    <div class="js_clockContainer">
-      <h1 class="js_clock">00:00</h1>
-    </div>
-    <form class="js_form nameForm">
-      <input type="text" placeholder="What is your name?" />
-    </form>
-    <h4 class="js_greeting greeting"></h4>
+    <div class="js_container container">
+      <div class="layer">
+        <div class="js_clockContainer clockContainer">
+          <h1 class="js_clock clock">00:00</h1>
+        </div>
+        <form class="js_form nameForm">
+          <input type="text" placeholder="What is your name?" />
+        </form>
+        <h2 class="js_greeting greeting"></h2>
 
-    <form class="js_todoForm todoForm">
-      <input type="text" placeholder="Write a to do" />
-    </form>
-    <ul class="js_todoList todoList"></ul>
+        <form class="js_todoForm todoForm">
+          <input type="text" placeholder="Write a to do" />
+        </form>
+        <ul class="js_todoList todoList"></ul>
+      </div>
+    </div>
 
     <script src="src/clock.js"></script>
     <script src="src/greeting.js"></script>

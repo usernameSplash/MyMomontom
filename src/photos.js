@@ -1,4 +1,4 @@
-const style = document.body.style;
+const style = document.querySelector('.js_container').style;
 const num_images = 9;
 let images = [];
 let prevRand = 0;
@@ -22,7 +22,8 @@ function initializeImageArray() {
 
 function init() {
   initializeImageArray();
-  setInterval(changeBackground, 1000);
+  changeBackground();
+  setInterval(changeBackground, 10000);
 }
 
 init();
