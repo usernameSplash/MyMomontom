@@ -23,7 +23,7 @@ function initializeImageArray() {
 function init() {
   initializeImageArray();
   changeBackground();
-  setInterval(changeBackground, 10000);
+  setInterval(changeBackground, 20000);
 }
 
 init();

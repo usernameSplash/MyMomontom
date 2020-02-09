@@ -41,19 +41,24 @@ function askForCoords() {
   navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
 }
 
-function getWeatherInterval(lat, lon) {
+function getWeatherInterval() {
   askForCoords();
-  getWeather(lat, lon);
+  const loadedCoords = localStorage.getItem(COORDS_LS);
+  const parsedCoords = JSON.parse(loadedCoords);
+  getWeather(parsedCoords.latitude, parsedCoords.longitude);
+  console.log(parsedCoords);
 }
 
 function loadCoords() {
   const loadedCoords = localStorage.getItem(COORDS_LS);
   const parsedCoords = JSON.parse(loadedCoords);
+
   if (loadedCoords === null) {
-    getWeatherInterval(parsedCoords.latitude, parsedCoords.longitude);
+    getWeatherInterval();
+  } else {
+    getWeather(parsedCoords.latitude, parsedCoords.longitude);
   }
-  setInterval(getWeatherInterval, 3600 * 60 * 60);
-  console.log(parsedCoords);
+  setInterval(getWeatherInterval, 1000 * 60 * 60);
 }
 function saveCoords(coordsObj) {
   localStorage.setItem(COORDS_LS, JSON.stringify(coordsObj));
