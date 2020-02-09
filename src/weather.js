@@ -41,21 +41,24 @@ function askForCoords() {
   navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
 }
 
+function getWeatherInterval(lat, lon) {
+  askForCoords();
+  getWeather(lat, lon);
+}
+
 function loadCoords() {
   const loadedCoords = localStorage.getItem(COORDS_LS);
   const parsedCoords = JSON.parse(loadedCoords);
   if (loadedCoords === null) {
-    askForCoords();
+    getWeatherInterval(parsedCoords.latitude, parsedCoords.longitude);
   }
+  setInterval(getWeatherInterval, 3600 * 60 * 60);
   console.log(parsedCoords);
-
-  getWeather(parsedCoords.latitude, parsedCoords.longitude);
 }
 function saveCoords(coordsObj) {
   localStorage.setItem(COORDS_LS, JSON.stringify(coordsObj));
 }
 function init() {
   loadCoords();
-  setInterval(loadCoords, 1000 * 60 * 60);
 }
 init();
