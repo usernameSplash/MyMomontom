@@ -1,3 +1,10 @@
+@font-face {
+  font-family: SpoqaHanSans;
+  src: url('Spoqa Han Sans Regular.ttf') format('truetype');
+}
+body {
+  font-family: SpoqaHanSans;
+}
 ul {
   list-style-type: none;
   margin: 10;
@@ -16,7 +23,8 @@ button {
 li {
   text-align: left;
   border-radius: 5px 5px 5px 5px;
-  background-color: aliceblue;
+  background-color: rgba(240, 248, 255, 0.5);
+
   margin: 2px 0px 2px 0px;
 }
 
@@ -38,19 +46,23 @@ ul {
 }
 
 .layer {
-  margin-top: 15%;
-  /* text-align: center; */
+  margin: 10% auto;
+}
+.clockAndName {
+  width: fit-content;
+  background-color: rgba(240, 248, 255, 0.5);
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .clockContainer {
-  background-color: aliceblue;
   width: 350px;
-  border-radius: 10px 10px 10px 10px;
-  margin: 0 auto;
 }
 .clock {
   text-align: center;
   font-size: 72px;
+  margin: 0 0 0 0;
 }
 
 .nameForm,
@@ -62,7 +74,7 @@ ul {
 .greeting {
   width: max-content;
   padding: 5px 5px 5px 5px;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   border-radius: 5px 5px 5px 5px;
   margin: 0 auto;
 }
