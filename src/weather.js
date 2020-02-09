@@ -47,7 +47,6 @@ function loadCoords() {
   if (loadedCoords === null) {
     askForCoords();
   }
-  setInterval(askForCoords, 1000 * 60 * 60);
   console.log(parsedCoords);
 
   getWeather(parsedCoords.latitude, parsedCoords.longitude);
@@ -57,5 +56,6 @@ function saveCoords(coordsObj) {
 }
 function init() {
   loadCoords();
+  setInterval(loadCoords, 1000 * 60 * 60);
 }
 init();
