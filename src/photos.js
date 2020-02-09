@@ -25,4 +25,4 @@ function init() {
   setInterval(changeBackground, 1000);
 }
 
-// init();
+init();
